@@ -1,10 +1,22 @@
-# template-composite-action
+# checkout-action
 
-Template repository for Composite Action.
+A wrapper for [actions/checkout][checkout].
 
 ## Description
 
-Template repository for creating Composite Action with GitHub Actions.
+This action serves as a wrapper for [actions/checkout][checkout].
+It allows you to checkout a Git repository at a specific version, similar to [actions/checkout][checkout].
+The repository is checked out under `$GITHUB_WORKSPACE`, enabling your workflow to access it.
+
+## Usage
+
+```yaml
+  steps:
+    - name: Checkout
+      uses: tmknom/checkout-action@v1
+```
+
+See details in [actions/checkout][checkout].
 
 ## Permissions
 
@@ -22,4 +34,5 @@ See [GitHub Releases][releases].
 
 Apache 2 Licensed. See [LICENSE](LICENSE) for full details.
 
-[releases]: https://github.com/tmknom/template-composite-action/releases
+[checkout]: https://github.com/actions/checkout
+[releases]: https://github.com/tmknom/checkout-action/releases

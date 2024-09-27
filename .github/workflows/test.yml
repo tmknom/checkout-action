@@ -1,0 +1,39 @@
+name: Test
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ["action.yml", ".github/workflows/test.yml"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: tmknom/checkout-action@v1
+
+      - name: Exercise
+        id: exercise
+        uses: ./
+        with:
+          ref: v1.0.2
+
+      - name: Verify
+        env:
+          REF: ${{ steps.exercise.outputs.ref }}
+          COMMIT: ${{ steps.exercise.outputs.commit }}
+        run: |
+          set -x
+          test "${REF}" = "v1.0.2"
+          test "${COMMIT}" = "7e2404238a83a020dff03cd12e78c02ae45af9a6"

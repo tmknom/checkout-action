@@ -30,6 +30,26 @@ Inputs and outputs are exactly the same as the original [actions/checkout][check
 
 N/A
 
+## Versioning policy
+
+This action follows a unique versioning policy.
+It will never perform major version upgrades.
+Raising the major version would negate the purpose of this action.
+
+### Patch version upgrade
+
+When a patch or minor version of [actions/checkout][checkout] is released,
+this action applies the patch version upgrade.
+
+### Minor version upgrade
+
+When a major version of [actions/checkout][checkout] is released,
+this action applies a minor version upgrade.
+
+### Major version upgrade
+
+Never.
+
 ## Release notes
 
 See [GitHub Releases][releases].

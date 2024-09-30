@@ -20,7 +20,9 @@ See details in [actions/checkout][checkout].
 
 ## Permissions
 
-N/A
+| Scope    | Access |
+| :------- | :----- |
+| contents | read   |
 
 ## FAQ
 

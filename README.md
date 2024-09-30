@@ -16,7 +16,9 @@ The repository is checked out under `$GITHUB_WORKSPACE`, enabling your workflow 
       uses: tmknom/checkout-action@v1
 ```
 
-See details in [actions/checkout][checkout].
+## Inputs and outputs
+
+Inputs and outputs are exactly the same as the original [actions/checkout][checkout], including default values.
 
 ## Permissions
 

@@ -4,7 +4,8 @@ A wrapper for [actions/checkout][checkout].
 
 ## Description
 
-This action serves as a wrapper for [actions/checkout][checkout].
+This action is a wrapper for [actions/checkout][checkout].
+By using it, you can fully avoid the need for major version updates of [actions/checkout][checkout].
 It allows you to checkout a Git repository at a specific version, similar to [actions/checkout][checkout].
 The repository is checked out under `$GITHUB_WORKSPACE`, enabling your workflow to access it.
 

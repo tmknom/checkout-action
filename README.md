@@ -80,9 +80,5 @@ Never.
 
 See [GitHub Releases][releases].
 
-## License
-
-Apache 2 Licensed. See [LICENSE](LICENSE) for full details.
-
 [checkout]: https://github.com/actions/checkout
 [releases]: https://github.com/tmknom/checkout-action/releases
